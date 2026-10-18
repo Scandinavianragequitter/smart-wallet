@@ -18,7 +18,6 @@ nicla/main.py                                stack logic, rates,            oper
 - The app remembers the stack of notes (bottom → top). On a state change:
   - new state = the note *below* the top → the top note was **taken out**
   - `none` while notes are inside → **everything was taken out at once**
-  - anything else → a new note was **put in**
 - Balance is always in USD. The 20,000 Ar note is converted with a **live** rate fetched
   for every ariary transaction (ExchangeRate-API, backup: fawazahmed0 currency-api).
   If no live source is reachable the transaction waits instead of using a fixed rate.
@@ -52,8 +51,7 @@ python app.py                           # auto-detects the Nicla
 `python test_wallet.py` runs the stack-logic tests.
 
 ## Known limits
-- The camera only sees the top note: several notes inserted at once count as one,
-  and the same note twice in a row (a $20 on a $20) is not detected.
+- The camera only sees the top note: several notes inserted at once count as one
 - State is in memory; restarting the app empties the wallet.
 
-Note images: Wikimedia Commons.
+
