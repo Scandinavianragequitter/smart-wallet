@@ -1,5 +1,7 @@
 # Smart Wallet
 
+Hardware project for HackHarvard 2026.
+
 A cardboard wallet prototype that tracks the cash inside it. A Nicla Vision camera
 classifies the note on top of the stack; a laptop app turns those readings into
 transactions with amount, live exchange rate, time, location and nearby vendors.
